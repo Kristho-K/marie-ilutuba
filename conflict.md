@@ -1,3 +1,3 @@
 # Git merge-konflikti harjutus
 
-Valitud kujunduse värv: roosa .
+Valitud kujunduse värv: roosa ja beež.
