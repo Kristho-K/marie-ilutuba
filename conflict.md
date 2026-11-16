@@ -1,3 +1,3 @@
 # Git merge-konflikti harjutus
 
-Valitud kujunduse värv: määramata.
+Valitud kujunduse värv: beež.
