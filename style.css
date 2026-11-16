@@ -1,0 +1,119 @@
+:root {
+  --background: #f7f4ee;
+  --surface: #fffcf8;
+  --ink: #39322f;
+  --muted: #817771;
+  --accent: #95654e;
+  --line: #e4dcd1;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: radial-gradient(circle at 85% 0%, #fbf3e8 0, transparent 38%), var(--background);
+  font-family: "DM Sans", Arial, sans-serif;
+  line-height: 1.55;
+}
+a { color: inherit; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+.page-shell { width: min(1160px, calc(100% - 64px)); margin: 0 auto; }
+.site-header {
+  min-height: 214px;
+  padding: 48px 0 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  border-bottom: 1px solid var(--line);
+}
+.site-logo {
+  display: inline-block;
+  color: var(--accent);
+  font-family: "Great Vibes", "Brush Script MT", cursive;
+  font-size: clamp(3.7rem, 6.2vw, 5.6rem);
+  line-height: 1.05;
+  text-decoration: none;
+  font-weight: 400;
+}
+.brand-caption { margin: 0 0 17px 9px; color: var(--muted); font-size: 0.82rem; letter-spacing: 0.18em; text-transform: uppercase; }
+.main-navigation { display: flex; gap: 34px; align-items: center; padding-left: 8px; }
+.nav-link { text-decoration: none; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.86rem; font-weight: 700; transition: color 0.2s; }
+.nav-link:hover, .nav-link.current { color: var(--accent); }
+.social-section { display: flex; gap: 13px; margin-bottom: 1px; }
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #b9aa9a;
+  border-radius: 50%;
+  color: #64564e;
+  background: rgba(255, 255, 255, 0.6);
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.social-link { transition: background 0.2s, color 0.2s, transform 0.2s; }
+.social-link:hover { color: white; background: var(--accent); transform: translateY(-2px); }
+.section-heading { padding: 54px 0 37px; }
+.eyebrow { margin: 0 0 10px; text-transform: uppercase; letter-spacing: 0.21em; font-size: 0.74rem; font-weight: 700; color: var(--accent); }
+h1, h2, h3, p { margin-top: 0; }
+h1 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: clamp(2.1rem, 4vw, 3.3rem); letter-spacing: -0.035em; line-height: 1.2; margin-bottom: 14px; }
+.section-heading > p:last-child { max-width: 650px; color: var(--muted); font-size: 0.99rem; margin-bottom: 0; }
+.content-columns { display: grid; grid-template-columns: 1.21fr 0.9fr; gap: 42px; align-items: start; }
+.section-title-line { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+.section-title-line h2 { font-family: Georgia, "Times New Roman", serif; font-size: 1.42rem; font-weight: 400; margin: 0; }
+.section-count { color: var(--muted); font-size: 0.78rem; letter-spacing: 0.04em; }
+.gallery-photo { position: relative; height: 430px; overflow: hidden; background: #d6c8b9; }
+.gallery-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.gallery-overlay { position: absolute; inset: auto 0 0; padding: 50px 26px 23px; color: white; background: linear-gradient(transparent, rgba(35, 30, 27, 0.72)); font-family: Georgia, "Times New Roman", serif; font-size: 1.4rem; }
+.gallery-description { margin: 19px 0 0; font-size: 0.94rem; color: var(--muted); max-width: 550px; }
+.map-box { height: 260px; overflow: hidden; border: 1px solid var(--line); background: #e6e6e0; }
+.map-box iframe { border: none; width: 100%; height: 100%; display: block; }
+.visit-details { padding: 23px 0 9px; border-bottom: 1px solid var(--line); }
+.detail-group { margin-bottom: 22px; }
+.detail-group h3 { margin: 0 0 7px; font-size: 0.77rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--accent); }
+.detail-group p { margin: 0; font-size: 0.97rem; }
+.hours-list { margin: 0; font-size: 0.94rem; }
+.hours-list div { display: flex; justify-content: space-between; max-width: 300px; }
+.hours-list dt { color: var(--muted); }
+.hours-list dd { margin: 0; }
+.directions-link, .text-link { display: inline-block; margin-top: 17px; font-weight: 700; font-size: 0.88rem; color: var(--accent); text-decoration: none; }
+.directions-link:hover, .text-link:hover { text-decoration: underline; }
+.site-footer { display: flex; flex-wrap: wrap; gap: 14px 28px; justify-content: space-between; border-top: 1px solid var(--line); padding: 24px 0 36px; margin-top: 65px; color: var(--muted); font-size: 0.75rem; }
+.site-footer p { margin: 0; }
+.site-footer a { text-underline-offset: 3px; }
+.subpage-content { padding: 65px 0 10px; max-width: 750px; min-height: 460px; }
+.subpage-intro { color: var(--muted); margin-bottom: 28px; }
+.price-card { border: 1px solid var(--line); padding: 33px 38px; background: var(--surface); }
+.price-card h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: 1.55rem; margin-bottom: 25px; }
+.price-list { margin: 0; padding: 0; list-style: none; }
+.price-list li { padding: 13px 0; display: flex; gap: 25px; justify-content: space-between; border-bottom: 1px solid var(--line); }
+.price-list li:last-child { border-bottom: 0; }
+.price-list strong { color: var(--accent); }
+.small-note { margin: 23px 0 0; color: var(--muted); font-size: 0.79rem; }
+.booking-card p { color: var(--muted); margin: 0; }
+@media (max-width: 780px) {
+  .page-shell { width: min(100% - 36px, 650px); }
+  .site-header { min-height: 0; padding: 35px 0 23px; align-items: flex-start; }
+  .site-logo { font-size: clamp(3.4rem, 10vw, 4.7rem); }
+  .social-section { margin-top: 17px; gap: 7px; }
+  .social-icon { width: 36px; height: 36px; font-size: 0.8rem; }
+  .content-columns { grid-template-columns: 1fr; gap: 45px; }
+  .section-heading { padding: 40px 0 32px; }
+  .gallery-photo { height: min(70vw, 430px); }
+  .map-box { height: 300px; }
+  .site-footer { margin-top: 45px; }
+}
+@media (max-width: 480px) {
+  .site-header { flex-direction: column; gap: 17px; }
+  .social-section { margin-top: 0; }
+  .main-navigation { gap: 22px; }
+  .nav-link { font-size: 0.76rem; }
+  .section-heading h1 { font-size: 2.35rem; }
+  .section-count { font-size: 0.66rem; }
+  .price-card { padding: 23px; }
+}
